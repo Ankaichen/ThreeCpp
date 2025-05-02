@@ -8,11 +8,11 @@
   ******************************************************************************
   */
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 int main(int argc, char *argv[]) {
-
+    system("chcp 65001 > nul");
     ::testing::InitGoogleTest(&argc, argv);
-
+    ::testing::GTEST_FLAG(color) = "yes";
     return RUN_ALL_TESTS();
 }
