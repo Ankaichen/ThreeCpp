@@ -22,12 +22,15 @@ link_directories(${THIRD_PARTY_LIBRARY_PATH})
 file(COPY ${THIRD_PARTY_SHARED_LIBRARY_PATH} DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${ASSETS_PATH} DESTINATION ${CMAKE_BINARY_DIR})
 
+add_subdirectory(src)
+include_directories(src)
+
 add_executable(ThreeCpp main.cpp ${THIRD_PARTY_SOURCE_PATH})
 target_link_libraries(ThreeCpp
         PRIVATE
-        glfw3dll
+        three_cpp glfw3dll
 )
 
 enable_testing()
 add_subdirectory(${CMAKE_SOURCE_DIR}/thirdparty/googletest)
-add_subdirectory(./test)
+add_subdirectory(test)
