@@ -137,6 +137,9 @@ TEST(EventDispatcher, dispatchEvent) {
     tc.addEventListener(TypeIdProvider::getTypeId<TestEvent1>(), listener1_2);
     tc.func1(event1_data);
     tc.func1(event1_data);
+    tc.clearEventListener(TypeIdProvider::getTypeId<TestEvent1>());
+    tc.func1(event1_data);
+    tc.func1(event1_data);
 
     tc.func2(event2_data1, event2_data2);
 
