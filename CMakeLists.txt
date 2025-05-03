@@ -5,8 +5,10 @@ set(CMAKE_CXX_STANDARD 20)
 
 file(GLOB THIRD_PARTY_INCLUDE_PATH
         ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glad/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glfw/include)
+        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glfw/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glm/include)
 file(GLOB THIRD_PARTY_LIBRARY_PATH
+        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glm/lib
         ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glfw/lib)
 file(GLOB THIRD_PARTY_SHARED_LIBRARY_PATH
         ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glfw/bin/*)
